@@ -9,6 +9,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import {Routes, RouterModule} from "@angular/router";
+import { HomeComponent } from './home/home.component';
 
 
 
@@ -19,11 +20,12 @@ import {Routes, RouterModule} from "@angular/router";
     LoginComponent,
     FooterComponent,
     HeaderComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
-    BrowserModule
-   
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

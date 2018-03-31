@@ -1,7 +1,7 @@
 
  <div id = "header_wrapper">
 	<header id = "header">
-		<!-- <div class = 'logo_wrap'>
+		<!-- <div class = 'logo_wrap' style="padding: 10px">
 			<img src = "../images/logo.png" style = "width: 150px; height: 50px;">
 		</div> -->
 		
@@ -13,62 +13,23 @@
       <a class="navbar-brand" href="/#/home">upscbook</a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="/#/home">Home</a></li>
+      <li class="active"><a href="/#/home">Home</a></li>
       
     </ul>
     <ul class="nav navbar-nav">
-    <li> <a href="contactus">Contact us</a></li>
-    </ul>
+    <li> <a href="/#/contactus">Contact us</a></li>
+  </ul>
     <ul class="nav navbar-nav navbar-right">
-      
+      <li><a href="/#/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="/#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      
     </ul>
   </div>
 </nav> 
 </header>
 </div>
-<div class="Form_Wrapper">
- <form class="form-horizontal" action="#">
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="email">Email:</label>
-    <div class="col-sm-6">
-      <input type="email" class="form-control" id="email" placeholder="Enter email">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Password:</label>
-    <div class="col-sm-6">
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password">
-    </div>
-  </div>
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="pwd">Confirm Password:</label>
-    <div class="col-sm-6">
-      <input type="password" class="form-control" id="pwd1" placeholder="Enter password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <a href="/#/term_and_conditions.html">terms & conditions</a>
-    </div>
-  </div>
-  
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <button (click)="onClick()" type="submit" class="btn btn-default" id="btnsignUp">Submit</button>
-      <div style="color:green">
-        {{greeting}}
-      </div>
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-    <a href="/#/login"> <button type="button" class="btn btn-default">Login</button></a>
-    </div>
-  </div>
-</form> 
-</div>
- <footer class="footer-distributed">
+
+<footer class="footer-distributed">
 
       <div class="footer-left">
 
@@ -129,9 +90,6 @@
       </div>
 
     </footer>
+    <script src="../js/login.js"></script>
+   
 
-
-
-
-    <script src="../js/register.js"></script>
-		 

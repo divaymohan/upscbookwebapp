@@ -1,0 +1,36 @@
+<div class="row">
+     <div class="m-t-1">
+          <button class="btn btn-primary" (click)="getAllCats()">GET</button> 
+      <!--     <button class="btn btn-primary" (click)="doPOST()">POST</button> 
+          <button class="btn btn-primary" (click)="doPUT()">PUT</button>  
+         <button class="btn btn-primary" (click)="doDELETE()">DELETE</button>  
+            -->
+        </div>
+       </div>
+       <tr *ngFor="let post of _postsArray">
+        <td class="text-center" style="width: 15px;">{{post.QUS_ID}}</td>
+        <td class="text-center" style="width: 200px;">{{post.SUBJECT_ID}}</td>
+        <td class="text-center" style="width: 200px;">{{post.YEAR}}</td>
+        <td class="text-center" style="width: 15px;">{{post.QUS_TEXT}}</td>
+        <td class="text-center" style="width: 200px;">{{post.OPTION1}}</td>
+        <td class="text-center" style="width: 200px;">{{post.OPTION2}}</td>
+        <td class="text-center" style="width: 200px;">{{post.OPTION3}}</td>
+        <td class="text-center" style="width: 200px;">{{post.OPTION4}}</td>
+        <td class="text-center" style="width: 200px;">{{post.ANSWER}}</td>
+        
+        <!-- <td class="text-center">{{post.body}}</td> -->
+    </tr>
+       
+<!-- <div class="row">
+     <div class="m-t-1">
+          <button class="btn btn-secondary" (click)="doGETAsPromise()">As Promise</button> 
+          <button class="btn btn-secondary" (click)="doGETAsPromiseError()">Error as Promise</button>
+          <button class="btn btn-secondary" (click)="doGETAsObservableError()">Error as Observable</button>  
+        </div> 
+      </div>
+
+<div class="row">
+     <div class="m-t-1">
+          <button class="btn btn-danger" (click)="doGETWithHeaders()">With Headers</button>
+         </div> 
+    </div>  -->

@@ -10,6 +10,9 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import {Routes, RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
+import { HttpModule, Http,  URLSearchParams,Response, RequestOptions, Headers } from '@angular/http';
+import { HttpClientModule} from '@angular/common/http';
 
 
 
@@ -21,11 +24,14 @@ import { HomeComponent } from './home/home.component';
     FooterComponent,
     HeaderComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

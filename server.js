@@ -3,7 +3,11 @@ var mysql = require('mysql');
 
 
 var app = express();
-
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 //set port
 var port = process.env.PORT || 3000
 app.use(express.static(__dirname));
@@ -38,7 +42,7 @@ var connection = mysql.createConnection({
 
  app.get("/api/qus",function(req,res){
  connection.query('SELECT * from questions', function(err, rows, fields) {
- connection.end();
+//  connection.end();
    if (!err){
      console.log('The solution is: ', rows);
      res.json(rows);
@@ -49,9 +53,9 @@ var connection = mysql.createConnection({
    
    });
  });
- app.get("/api/user/:name",function(req,res){
-    connection.query('SELECT * from user', function(err, rows, fields) {
-    connection.end();
+ app.get("/api/qus/:name",function(req,res){
+    connection.query('SELECT * from questions', function(err, rows, fields) {
+    // connection.end();
       if (!err){
         console.log('The solution is: ', rows);
         res.json(rows);

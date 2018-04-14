@@ -112,19 +112,19 @@
                                         <div class="row">
                         <div class="funkyradio">
                             <div class="funkyradio-default">
-                                <input type="radio" name="radio" id="radio1" />
+                                <input type="radio" name="radio" id="radio1" (click)="validationData(post,post.OPTION1)"/>
                                 <label for="radio1">{{post.OPTION1}}</label>
                             </div>
                             <div class="funkyradio-defalut">
-                                <input type="radio" name="radio" id="radio2"/>
+                                <input type="radio" name="radio" id="radio2" (click)="validationData(post,post.OPTION2)"/>
                                 <label for="radio2">{{post.OPTION2}}</label>
                             </div>
-                            <div class="funkyradio-success">
-                                <input type="radio" name="radio" id="radio3" />
+                            <div class="funkyradio-default">
+                                <input type="radio" name="radio" id="radio3" (click)="validationData(post,post.OPTION3)"/>
                                 <label for="radio3">{{post.OPTION3}}</label>
                             </div>
                             <div class="funkyradio-default">
-                                <input type="radio" name="radio" id="radio4" />
+                                <input type="radio" name="radio" id="radio4" (click)="validationData(post,post.OPTION4)"/>
                                 <label for="radio4">{{post.OPTION4}}</label>
                             </div>
                             <div class="funkyradio-default">

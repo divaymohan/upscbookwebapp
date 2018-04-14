@@ -36,7 +36,16 @@ export class TestComponent implements OnInit {
   _postsArray: IQustion[];
   constructor(private http: Http) {
   }
-
+  public validationData(post,option){
+      if(post.ANSWER==option){
+          alert("you are right");
+      }
+      else{
+          alert("you are wrong");
+      }
+      
+      
+  }
   public nextID(){
       alert("next");
       this.quesId= this.quesId + 1;

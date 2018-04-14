@@ -1,3 +1,55 @@
-<p>
-  navigator works!
-</p>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div class="container">
+<app-navigator></app-navigator>
+<div *ngFor="let post of _postsArray">
+
+        
+	<div class="row">
+	    <br/>
+        <div class="panel panel-heading">
+                             
+                 
+
+                  <h1>
+                    {{post.QUS_TEXT}}
+                  </h1>
+                    
+
+                 
+        
+<div class = "panel-body">
+      <h4>Your Answer</h4>
+           </div>
+
+                <div class="panel-footer">
+                    <div class="row">
+    <div class="funkyradio">
+        <div class="funkyradio-default">
+            <input type="radio" name="radio" id="radio1" />
+            <label for="radio1">{{post.OPTION1}}</label>
+        </div>
+        <div class="funkyradio-defalut">
+            <input type="radio" name="radio" id="radio2"/>
+            <label for="radio2">{{post.OPTION2}}</label>
+        </div>
+        <div class="funkyradio-success">
+            <input type="radio" name="radio" id="radio3" />
+            <label for="radio3">{{post.OPTION3}}</label>
+        </div>
+        <div class="funkyradio-default">
+            <input type="radio" name="radio" id="radio4" />
+            <label for="radio4">{{post.OPTION4}}</label>
+        </div>
+       
+    </div>        
+                           
+                    </div>
+                </div>
+        </div>
+</div>
+</div>
+</div>

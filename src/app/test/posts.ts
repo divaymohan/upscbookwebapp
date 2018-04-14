@@ -1,4 +1,4 @@
-export interface IPosts {
+export interface IQustion{
     QUS_ID: number;
     SUBJECT_ID: number;
     QUS_TEXT: string;

@@ -53,8 +53,9 @@ var connection = mysql.createConnection({
    
    });
  });
- app.get("/api/qus/:name",function(req,res){
-    connection.query('SELECT * from questions', function(err, rows, fields) {
+ app.get("/api/qus/:id",function(req,res){
+   var id = req.params['id'];
+    connection.query('SELECT * from questions where QUS_ID = ' + id, function(err, rows, fields) {
     // connection.end();
       if (!err){
         console.log('The solution is: ', rows);

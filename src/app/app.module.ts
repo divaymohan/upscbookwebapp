@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
 import { HttpModule, Http,  URLSearchParams,Response, RequestOptions, Headers } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,8 @@ import { HttpClientModule} from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

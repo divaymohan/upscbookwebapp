@@ -18,6 +18,7 @@
 
 
     <div class="wrapper">
+            <ng-container *ngIf="show">
         
         <nav id="sidebar">
             <div class="sidebar-header">
@@ -60,7 +61,7 @@
                 <button type="submit" class="btn btn-default" id="btnLogout">Logout</button>
             </ul>
         </nav>
-
+    </ng-container>
         <!-- Page Content Holder -->
         <div id="content">
 
@@ -68,7 +69,7 @@
                 <div class="container-fluid">
 
                     <div class="navbar-header">
-                        <button type="button" id="sidebarCollapse" class="navbar-btn">
+                        <button (click)="toggle()" type="button" id="sidebarCollapse" class="navbar-btn">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -85,13 +86,23 @@
                     </div>
                 </div>
             </nav>
-
+            
+            
             <div class="container">
+                      
                     
                     <div *ngFor="let post of _postsArray">
+                        <div class="row">
+                            <a class="previous" (click)="previousID()">&laquo; Previous</a>
+                            <div class={{optclass}} *ngIf="nextHide">
+                                   
+                                    <a class="next" (click)="nextID()">Next &raquo;</a>
+                                </div>
+                            </div>
                     
                             
                         <div class="row">
+                                
                             <br/>
                             <div class="panel panel-heading">
                                                  
@@ -109,29 +120,25 @@
                    </div>
                     
                 <div class="panel-footer">
-                                        <div class="row">
+                    <div class="row">
                         <div class="funkyradio">
-                            <div class="funkyradio-default">
+                            <div class={{optclass}}>
                                 <input type="radio" name="radio" id="radio1" (click)="validationData(post,post.OPTION1)"/>
                                 <label for="radio1">{{post.OPTION1}}</label>
                             </div>
-                            <div class="funkyradio-defalut">
+                            <div class={{optclass}}>
                                 <input type="radio" name="radio" id="radio2" (click)="validationData(post,post.OPTION2)"/>
                                 <label for="radio2">{{post.OPTION2}}</label>
                             </div>
-                            <div class="funkyradio-default">
+                            <div class={{optclass}}>
                                 <input type="radio" name="radio" id="radio3" (click)="validationData(post,post.OPTION3)"/>
                                 <label for="radio3">{{post.OPTION3}}</label>
                             </div>
-                            <div class="funkyradio-default">
+                            <div class={{optclass}}>
                                 <input type="radio" name="radio" id="radio4" (click)="validationData(post,post.OPTION4)"/>
                                 <label for="radio4">{{post.OPTION4}}</label>
                             </div>
-                            <div class="funkyradio-default">
-                                <button (click)="nextID()">next</button>
-                                {{quesId}}
-                                
-                            </div>
+                            
                             
                            
                         </div>        
@@ -143,9 +150,19 @@
                     </div>
         
                     </div>
-                        
+                    <div class="row">
+                            <a class="previous" (click)="previousID()">&laquo; Previous</a>
+                            <div class={{optclass}} *ngIf="nextHide">
+                                    
+                                    <a class="next" (click)="nextID()">Next &raquo;</a>
+                                    
+                                </div>
+                            </div> 
         </div>
+   
     </div>
+  
+    
 
 
 
@@ -156,6 +173,7 @@
         <!-- Bootstrap Js CDN -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       
-
+        <!-- <script src="../../../js/navg.js"></script> -->
+       
         
 </body>

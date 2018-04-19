@@ -14,6 +14,9 @@ import { TestComponent } from './test/test.component';
 import { HttpModule, Http,  URLSearchParams,Response, RequestOptions, Headers } from '@angular/http';
 import { HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AlertComponent } from './_directives/index';
+import { AlertService } from './_services/index';
+
 
 
 
@@ -26,7 +29,11 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     RegisterComponent,
     HomeComponent,
-    TestComponent
+    TestComponent,
+    AlertComponent
+ 
+    
+    
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,8 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AlertService],
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule{ }
